@@ -1,4 +1,4 @@
-# -*- coding : utf-8 -*-e
+# -*- coding : utf-8 -*-
 from naoqi import ALProxy
 
 
