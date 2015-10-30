@@ -11,8 +11,9 @@ class PepperTablet:
     def config_wifi(self, security, ssid, key):
         print self.tablet.configureWifi(security, ssid, key)
 
-    def enable_wifi(self):
+    def connect_wifi(self):
         self.tablet.enableWifi()
+        print self.tablet.getWifiStatus()
 
     def show_url(self, url):
         self.tablet.showWebview()
@@ -20,8 +21,7 @@ class PepperTablet:
 
 
 if __name__ == '__main__':
-    tablet = PepperTablet("192.168.100.30", 9559)
-    tablet.enable_wifi()
+    tablet = PepperTablet("192.168.10.74", 9559)
+    tablet.connect_wifi()
     tablet.tablet.cleanWebview()
-    print tablet.tablet.getWifiStatus()
     tablet.show_url("http://html5test.com")
