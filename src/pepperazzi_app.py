@@ -11,11 +11,16 @@ class PepperazziApp:
         self.ip_addr = ip_addr
         self.port    = port
         self.proxy   = []
+        self.watcher = []
 
     def inject(self, proxies):
         for proxy in proxies:
             self.proxy[proxy] = ALProxy(proxy, self.ip_addr, self.port)
-                
+
+    # TODO:
+    def watch(self, watcher):
+        pass
+            
     def run(self):
         print("pepper IP adress: " + self.ip_addr)
         print("port number: " + self.port)
