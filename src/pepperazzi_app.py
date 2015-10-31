@@ -47,6 +47,7 @@ class PepperazziApp:
             "ALMotion",
             "ALTextToSpeech",
             "ALPhotoCapture",
+            "ALTabletService",
         ])
         app.run()
 
